@@ -112,34 +112,13 @@ nav {
     color: #89877d;
 }
 
-
-/* playful circle */
-
-.hero::after {
-    content: "";
-
-    position: absolute;
-
-    width: 360px;
-    height: 360px;
-
-    right: 8%;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    border: 1px solid #c9c8bb;
-    border-radius: 50%;
-}
-
-
 /* hero content */
 
 .hero-content {
     position: relative;
     z-index: 2;
 
-    max-width: 920px;
+    max-width: 1050px;
 }
 
 .small-text {
@@ -183,6 +162,18 @@ nav {
     border-radius: 50%;
 
     vertical-align: 18px;
+
+    animation: floatDot 2.5s ease-in-out infinite;
+}
+
+@keyframes floatDot {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
 }
 
 
@@ -197,6 +188,9 @@ nav {
     font-weight: 500;
 
     color: #7f895f;
+
+    transform: rotate(-1deg);
+    transform-origin: left center;
 }
 
 
@@ -923,15 +917,6 @@ footer {
 
         font-size: 7px;
     }
-
-    .hero::after {
-        width: 220px;
-        height: 220px;
-
-        right: -100px;
-        top: 68%;
-    }
-
     .small-text {
         font-size: 9px;
         letter-spacing: 3px;
